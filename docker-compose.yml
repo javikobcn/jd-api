@@ -1,0 +1,14 @@
+services:
+
+  jd-api:
+    build: .
+    container_name: jd-api
+    restart: "no"
+
+    ports:
+      - "5500:5000"
+
+    environment:
+      MYJD_EMAIL: ${MYJD_EMAIL}
+      MYJD_PASSWORD: ${MYJD_PASSWORD}
+      MYJD_DEVICE: ${MYJD_DEVICE}
